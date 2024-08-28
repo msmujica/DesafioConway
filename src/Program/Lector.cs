@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 
 namespace Ucu.Poo.GameOfLife;
@@ -18,9 +19,9 @@ public class Lector
         this.url = url;
     }
 
-    public void setLeerArchivo(Lector urls)
+    public void setLeerArchivo()
     {
-        string content = File.ReadAllText(urls.url);
+        string content = File.ReadAllText(this.url);
         string[] contentLines = content.Split('\n');
         bool[,] board = new bool[contentLines.Length, contentLines[0].Length];
         for (int  y=0; y<contentLines.Length;y++)
@@ -33,5 +34,6 @@ public class Lector
                 }
             }
         }
+        
     }
 }

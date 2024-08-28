@@ -1,12 +1,4 @@
-﻿using System;
+﻿using Ucu.Poo.GameOfLife;
 
-namespace Ucu.Poo.GameOfLife
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-}
+Lector urus = new Lector("board.txt");
+urus.setLeerArchivo();
