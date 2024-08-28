@@ -37,7 +37,7 @@ public class ImprimirTablero
             }
             Console.WriteLine(s.ToString());
             Logica logi = new Logica();
-            logi.logic(b);
+            b = logi.logic(b);
             Thread.Sleep(300);
         }
     }   
