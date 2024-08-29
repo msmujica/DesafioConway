@@ -1,13 +1,12 @@
 ﻿using Ucu.Poo.GameOfLife;
-using System.IO;
 
 Lector url = new Lector();
-Tablero tab = new Tablero();
-Logica log = new Logica();
-ImprimirTablero imp = new ImprimirTablero();
+Tablero tablero = new Tablero();
+Logica logica = new Logica();
+ImprimirTablero imprimir = new ImprimirTablero();
 
 string[] content = url.getLeerArchivo("board.txt");
-bool[,] matriz = tab.getLeerTablero(content);
-bool[,] newmatriz = log.logic(matriz);
-imp.imprimir(newmatriz);
+bool[,] matriz = tablero.getLeerTablero(content);
+bool[,] newMatriz = logica.setLogica(matriz);
+imprimir.imprimirTableros(newMatriz, logica);
 

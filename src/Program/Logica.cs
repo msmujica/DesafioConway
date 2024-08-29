@@ -8,22 +8,27 @@ public class Logica
     {
     }
 
-    public bool[,] logic(bool[,] matriz)
+    public bool[,] setLogica(bool[,] matriz)
     {
         bool[,] gameBoard = matriz;
+        // Obtenemos el ancho y el largo del tablero.
         int boardWidth = gameBoard.GetLength(0);
         int boardHeight = gameBoard.GetLength(1);
 
+        // Creamos una copia del tablero para hacer cambios sin afectar al tablero original.
         bool[,] cloneboard = new bool[boardWidth, boardHeight];
         for (int x = 0; x < boardWidth; x++)
         {
             for (int y = 0; y < boardHeight; y++)
             {
                 int aliveNeighbors = 0;
+                
+                // Contamos las celulas vecinas.
                 for (int i = x - 1; i <= x + 1; i++)
                 {
                     for (int j = y - 1; j <= y + 1; j++)
                     {
+                        // Verifica que el vecino este vivo.
                         if (i >= 0 && i < boardWidth && j >= 0 && j < boardHeight && gameBoard[i, j])
                         {
                             aliveNeighbors++;
@@ -31,6 +36,7 @@ public class Logica
                     }
                 }
 
+                
                 if (gameBoard[x, y])
                 {
                     aliveNeighbors--;
@@ -60,6 +66,6 @@ public class Logica
         }
 
         gameBoard = cloneboard;
-        return cloneboard;
+        return gameBoard;
     }
 }
