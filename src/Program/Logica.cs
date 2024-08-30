@@ -1,5 +1,8 @@
-using System.ComponentModel.DataAnnotations;
-
+/*
+ La clase Logica contiene la lógica del Juego de la Vida. 
+ Su responsabilidad es tomar el tablero actual y calcular el siguiente estado del tablero según las reglas del juego. 
+ La misma colabora con Tablero.
+ */
 namespace Ucu.Poo.GameOfLife;
 
 public class Logica

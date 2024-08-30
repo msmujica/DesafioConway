@@ -1,3 +1,10 @@
+/*
+ La clase ImprimirTablero es responsable de mostrar el estado actual del tablero en la consola y actualizarlo en un 
+ bucle(en este caso infinito ya que es un while(True)). 
+ Su responsabilidad es la visualización y actualización del estado del juego.
+ La misma colabora con Logica.
+ */
+
 using System;
 using System.Text;
 using System.Threading;

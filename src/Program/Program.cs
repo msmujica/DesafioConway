@@ -1,4 +1,7 @@
 ﻿using Ucu.Poo.GameOfLife;
+// Se decidio dividir el codigo en 4 clases o tarjetas CRC, Imprimir Tablero, Lector, Logica y Tablero.
+// Los mismos se explican la decision en cada clase, al inicio.
+
 
 Lector url = new Lector();
 Tablero tablero = new Tablero();

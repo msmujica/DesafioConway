@@ -1,3 +1,8 @@
+/*
+ El lector su única responsabilidad es leer un archivo y devolver su contenido.
+ Esto se va bien con SRP, ya que se encarga exclusivamente de la entrada de datos.
+ La misma no colabora con ninguna.
+*/
 using System;
 using System.IO;
 

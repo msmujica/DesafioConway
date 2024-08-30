@@ -1,7 +1,8 @@
-using System;
-using System.Collections;
-using System.ComponentModel.DataAnnotations;
-
+/*
+ La clase tablero convierte el contenido del archivo en una matriz 2D de booleanos que seria como el tablero de juego.
+ La responsabilidad de la clase es convertir de datos de entrada en una estructura que pueda ser utilizada por el juego.
+ La misma colabora con Lector.
+*/
 namespace Ucu.Poo.GameOfLife;
 
 public class Tablero
